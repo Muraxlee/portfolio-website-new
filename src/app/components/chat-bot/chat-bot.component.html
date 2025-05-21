@@ -1,0 +1,57 @@
+<!-- Chat Bot Toggle Button -->
+<div class="chat-bot-toggle" [class.open]="isChatOpen" (click)="toggleChat()" aria-label="Toggle chat">
+  <i class="fas" [class.fa-comment]="!isChatOpen" [class.fa-times]="isChatOpen"></i>
+</div>
+
+<!-- Chat Window -->
+<div class="chat-window" [class.open]="isChatOpen">
+  <!-- Chat Header -->
+  <header class="chat-header">
+    <h3>Chat Assistant</h3>
+    <div class="chat-actions">
+      <button class="clear-btn" (click)="clearChat()" aria-label="Clear chat">
+        <i class="fas fa-trash"></i>
+      </button>
+      <button class="close-btn" (click)="toggleChat()" aria-label="Close chat">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Chat Messages -->
+  <div class="chat-messages" #chatMessagesContainer>
+    @for (message of messages; track message.id) {
+      <div class="message" [class.user-message]="message.sender === 'user'" [class.bot-message]="message.sender === 'bot'">
+        <div class="message-content">
+          <p>{{ message.text }}</p>
+          <span class="message-time">{{ message.timestamp | date:'shortTime' }}</span>
+        </div>
+      </div>
+    }
+    @empty {
+      <div class="empty-chat">
+        <p>No messages yet. Start a conversation!</p>
+      </div>
+    }
+  </div>
+
+  <!-- Chat Input -->
+  <div class="chat-input">
+    <input
+      type="text"
+      [(ngModel)]="newMessage"
+      placeholder="Type a message..."
+      (keyup.enter)="sendMessage()"
+      aria-label="Message input"
+      #messageInput
+      (focus)="onInputFocus()"
+    >
+    <button
+      (click)="sendMessage()"
+      [disabled]="!newMessage.trim()"
+      aria-label="Send message"
+    >
+      <i class="fas fa-paper-plane"></i>
+    </button>
+  </div>
+</div>
