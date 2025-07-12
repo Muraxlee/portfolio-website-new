@@ -30,31 +30,31 @@ import AOS from 'aos';
             <div class="project-card" data-aos="fade-up" data-aos-delay="100">
               <div class="project-image">
                 <div class="project-badge">Web App</div>
-                <img src="assets/images/projects/ecommerce.jpg" alt="E-commerce Platform">
+                <img src="assets/images/projects/invoice-saas.jpg" alt="Invoice Management SaaS">
                 <div class="project-overlay">
-                  <a href="#" class="btn btn-primary">
+                  <a href="https://youtu.be/tugbLWmV5aI" target="_blank" class="btn btn-primary">
                     <i class="fas fa-external-link-alt"></i>
-                    View Project
+                    View Demo
                   </a>
                 </div>
               </div>
               <div class="project-content">
-                <h4>E-commerce Platform</h4>
-                <p>A full-featured e-commerce platform with real-time inventory management and secure payment processing.</p>
+                <h4>Invoice Management SaaS</h4>
+                <p>Real-time invoicing dashboard with analytics, PDF generation, and team-based access control.</p>
                 <div class="project-tags">
-                  <span class="tag">Angular</span>
-                  <span class="tag">Node.js</span>
-                  <span class="tag">AWS</span>
-                  <span class="tag">MongoDB</span>
+                  <span class="tag">React</span>
+                  <span class="tag">Firebase</span>
+                  <span class="tag">Cloud Functions</span>
+                  <span class="tag">Stripe</span>
                 </div>
                 <div class="project-features">
                   <div class="feature">
-                    <i class="fas fa-cloud"></i>
-                    <span>Cloud Integration</span>
+                    <i class="fas fa-file-invoice"></i>
+                    <span>PDF Generation</span>
                   </div>
                   <div class="feature">
-                    <i class="fas fa-robot"></i>
-                    <span>AI Recommendations</span>
+                    <i class="fas fa-users"></i>
+                    <span>Team Access</span>
                   </div>
                 </div>
               </div>
@@ -63,30 +63,128 @@ import AOS from 'aos';
             <div class="project-card" data-aos="fade-up" data-aos-delay="200">
               <div class="project-image">
                 <div class="project-badge">Web App</div>
-                <img src="assets/images/projects/crm.jpg" alt="CRM System">
+                <img src="assets/images/projects/mentore-agro.jpg" alt="Mentore Agro Products">
                 <div class="project-overlay">
-                  <a href="#" class="btn btn-primary">
+                  <a href="https://mentoreagroproducts.netlify.app/" target="_blank" class="btn btn-primary">
                     <i class="fas fa-external-link-alt"></i>
-                    View Project
+                    View Live
                   </a>
                 </div>
               </div>
               <div class="project-content">
-                <h4>CRM System</h4>
-                <p>Enterprise-grade CRM system with advanced analytics and automation capabilities.</p>
+                <h4>Mentore Agro Products</h4>
+                <p>Business website for an agriculture export company with product listings and inquiry form.</p>
                 <div class="project-tags">
-                  <span class="tag">React</span>
-                  <span class="tag">Firebase</span>
-                  <span class="tag">Cloudflare</span>
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">Netlify</span>
                 </div>
                 <div class="project-features">
                   <div class="feature">
-                    <i class="fas fa-cloud"></i>
-                    <span>Cloud Storage</span>
+                    <i class="fas fa-list"></i>
+                    <span>Product Listings</span>
                   </div>
                   <div class="feature">
-                    <i class="fas fa-robot"></i>
-                    <span>AI Analytics</span>
+                    <i class="fas fa-envelope"></i>
+                    <span>Inquiry Form</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-2 mt-4">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="project-image">
+                <div class="project-badge">Web App</div>
+                <img src="assets/images/projects/snackhives.jpg" alt="SnackHives">
+                <div class="project-overlay">
+                  <a href="https://snackhive.netlify.app/" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-external-link-alt"></i>
+                    View Live
+                  </a>
+                </div>
+              </div>
+              <div class="project-content">
+                <h4>SnackHives</h4>
+                <p>Promotional landing page for a snacks delivery startup with CTA integration and responsive UI.</p>
+                <div class="project-tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                </div>
+                <div class="project-features">
+                  <div class="feature">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Responsive Design</span>
+                  </div>
+                  <div class="feature">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>CTA Integration</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+              <div class="project-image">
+                <div class="project-badge">Web App</div>
+                <img src="assets/images/projects/agent-gps.jpg" alt="Agent GPS Tracker">
+                <div class="project-overlay">
+                  <a href="https://www.youtube.com/watch?v=pof2bGm5U44" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-external-link-alt"></i>
+                    View Demo
+                  </a>
+                </div>
+              </div>
+              <div class="project-content">
+                <h4>Agent GPS Tracker</h4>
+                <p>Web-based real-time tracking and reporting tool for field agents.</p>
+                <div class="project-tags">
+                  <span class="tag">React</span>
+                  <span class="tag">Firebase</span>
+                  <span class="tag">Mapbox</span>
+                </div>
+                <div class="project-features">
+                  <div class="feature">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Real-time Tracking</span>
+                  </div>
+                  <div class="feature">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Reporting</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-2 mt-4">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+              <div class="project-image">
+                <div class="project-badge">Web App</div>
+                <img src="assets/images/projects/tindog.jpg" alt="TinDog">
+                <div class="project-overlay">
+                  <a href="https://muraxlee.github.io/TinDog/" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-external-link-alt"></i>
+                    View Live
+                  </a>
+                </div>
+              </div>
+              <div class="project-content">
+                <h4>TinDog</h4>
+                <p>Fun front-end project mimicking a dating app for dogs. Great for UI/UX exploration.</p>
+                <div class="project-tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">Bootstrap</span>
+                </div>
+                <div class="project-features">
+                  <div class="feature">
+                    <i class="fas fa-palette"></i>
+                    <span>UI/UX Exploration</span>
+                  </div>
+                  <div class="feature">
+                    <i class="fas fa-dog"></i>
+                    <span>Fun Project</span>
                   </div>
                 </div>
               </div>
@@ -101,62 +199,67 @@ import AOS from 'aos';
             <div class="project-card" data-aos="fade-up" data-aos-delay="100">
               <div class="project-image">
                 <div class="project-badge">Mobile App</div>
-                <img src="assets/images/projects/fitness.jpg" alt="Fitness Tracker">
+                <img src="assets/images/projects/kant.jpg" alt="Kant – Anonymous Social App">
                 <div class="project-overlay">
-                  <a href="#" class="btn btn-primary">
+                  <a href="https://gitfront.io/r/Ruby/QuXsQDixAEqm/Kants/" target="_blank" class="btn btn-primary">
                     <i class="fas fa-external-link-alt"></i>
-                    View Project
+                    View Client Code
                   </a>
                 </div>
               </div>
               <div class="project-content">
-                <h4>Fitness Tracker</h4>
-                <p>AI-powered fitness tracking app with personalized workout recommendations and progress analytics.</p>
+                <h4>Kant – Anonymous Social App</h4>
+                <p>An anonymous social media platform with real-time feeds, anonymous posting, and privacy-first features.</p>
                 <div class="project-tags">
-                  <span class="tag">React Native</span>
-                  <span class="tag">Firebase</span>
-                  <span class="tag">Google ADK</span>
+                  <span class="tag">Flutter</span>
+                  <span class="tag">Node.js</span>
+                  <span class="tag">PostgreSQL</span>
                 </div>
                 <div class="project-features">
                   <div class="feature">
-                    <i class="fas fa-cloud"></i>
-                    <span>Cloud Sync</span>
+                    <i class="fas fa-user-secret"></i>
+                    <span>Anonymous Posting</span>
                   </div>
                   <div class="feature">
-                    <i class="fas fa-robot"></i>
-                    <span>AI Workouts</span>
+                    <i class="fas fa-lock"></i>
+                    <span>Privacy-First</span>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
 
-            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+        <!-- Desktop Software -->
+        <div class="project-category" data-aos="fade-up">
+          <h3>Desktop Software</h3>
+          <div class="grid grid-2">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
               <div class="project-image">
-                <div class="project-badge">Mobile App</div>
-                <img src="assets/images/projects/food-delivery.jpg" alt="Food Delivery App">
+                <div class="project-badge">Desktop App</div>
+                <img src="assets/images/projects/banker.jpg" alt="Banker – Pawnshop Management App">
                 <div class="project-overlay">
-                  <a href="#" class="btn btn-primary">
+                  <a href="https://gitfront.io/r/Ruby/r6BkWibqWpWt/Banker_New/" target="_blank" class="btn btn-primary">
                     <i class="fas fa-external-link-alt"></i>
-                    View Project
+                    View Repo
                   </a>
                 </div>
               </div>
               <div class="project-content">
-                <h4>Food Delivery App</h4>
-                <p>Real-time food delivery platform with live tracking and AI-powered route optimization.</p>
+                <h4>Banker – Pawnshop Management App</h4>
+                <p>A fully offline desktop solution for pawnshop operations with secure local transactions and RDLC reports.</p>
                 <div class="project-tags">
-                  <span class="tag">Flutter</span>
-                  <span class="tag">AWS</span>
-                  <span class="tag">Google Maps</span>
+                  <span class="tag">C#</span>
+                  <span class="tag">SQLite</span>
                 </div>
                 <div class="project-features">
                   <div class="feature">
-                    <i class="fas fa-cloud"></i>
-                    <span>Cloud Backend</span>
+                    <i class="fas fa-lock"></i>
+                    <span>Secure Transactions</span>
                   </div>
                   <div class="feature">
-                    <i class="fas fa-robot"></i>
-                    <span>AI Routing</span>
+                    <i class="fas fa-file-invoice"></i>
+                    <span>RDLC Reports</span>
                   </div>
                 </div>
               </div>

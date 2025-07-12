@@ -19,11 +19,10 @@ import AOS from 'aos';
       <div class="container">
         <div class="hero-content" data-aos="fade-up">
           <span class="badge">Welcome to my portfolio</span>
-          <h1>Hi, I'm <span class="gradient-text">John Doe</span></h1>
-          <h2>Full-Stack Developer & Cloud Architect</h2>
+          <h1>Hi, I'm <span class="gradient-text">Murali P</span></h1>
+          <h2>Full-Stack Developer & Cross-Platform App Engineer</h2>
           <p class="hero-description">
-            I specialize in building modern web applications, mobile apps, and cloud solutions
-            that help businesses scale and succeed in the digital world.
+            I specialize in building full-stack web apps, mobile apps, and desktop solutions using React Native, Node.js, and .NET—delivering secure, scalable, and user-friendly products that solve real business problems.
           </p>
           <div class="hero-buttons">
             <a routerLink="/projects" class="btn btn-primary">
@@ -45,24 +44,22 @@ import AOS from 'aos';
         <div class="grid grid-2">
           <div class="about-content" data-aos="fade-right">
             <span class="section-subtitle">About Me</span>
-            <h2>Transforming Ideas into Digital Reality</h2>
+            <h2>Turning Ideas into Real-World Applications</h2>
             <p>
-              With over 5 years of experience in web and mobile development,
-              I've helped numerous businesses achieve their digital goals through
-              innovative solutions and cutting-edge technology.
+              I'm a versatile and results-driven developer with hands-on experience in building modern web, mobile, and desktop apps. With a strong foundation in full-stack development and a passion for clean, maintainable code, I've delivered tailored software solutions that improve efficiency and drive results for clients across industries.
             </p>
             <div class="stats-grid">
               <div class="stat-item">
-                <span class="stat-number">50+</span>
+                <span class="stat-number">10+</span>
                 <span class="stat-label">Projects Completed</span>
               </div>
               <div class="stat-item">
-                <span class="stat-number">30+</span>
-                <span class="stat-label">Happy Clients</span>
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Satisfied Clients</span>
               </div>
               <div class="stat-item">
-                <span class="stat-number">5+</span>
-                <span class="stat-label">Years Experience</span>
+                <span class="stat-number">1+</span>
+                <span class="stat-label">Year of Hands-on Development Experience</span>
               </div>
             </div>
             <a routerLink="/about" class="btn btn-outline">
@@ -73,7 +70,7 @@ import AOS from 'aos';
           <div class="about-image" data-aos="fade-left">
             <div class="image-container">
               <div class="image-background"></div>
-              <img src="assets/images/profile.jpg" alt="John Doe" class="profile-image">
+              <img src="assets/images/profile.jpg" alt="Murali P" class="profile-image">
             </div>
           </div>
         </div>

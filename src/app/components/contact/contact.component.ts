@@ -35,7 +35,7 @@ import AOS from 'aos';
               </div>
               <div class="contact-details">
                 <h4>Email</h4>
-                <a href="mailto:email&#64;example.com">email&#64;example.com</a>
+                <a href="mailto:muralipanneerselvam02&#64;gmail.com">muralipanneerselvam02&#64;gmail.com</a>
               </div>
             </div>
 
@@ -45,7 +45,7 @@ import AOS from 'aos';
               </div>
               <div class="contact-details">
                 <h4>Phone</h4>
-                <span>+1 234 567 890</span>
+                <span>+91 89733 97758</span>
               </div>
             </div>
 
@@ -55,7 +55,7 @@ import AOS from 'aos';
               </div>
               <div class="contact-details">
                 <h4>Location</h4>
-                <span>Your Location</span>
+                <span>Thanjavur,TamilNadu,India</span>
               </div>
             </div>
           </div>
