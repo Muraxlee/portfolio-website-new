@@ -112,15 +112,15 @@ import AOS from 'aos';
               <ul class="service-features">
                 <li>
                 <span class="feature-bullet"></span>
-                  <span>Machine Learning Models</span>
+                  <span>Machine Learning with n8n</span>
                 </li>
                 <li>
                 <span class="feature-bullet"></span>
-                  <span>Natural Language Processing</span>
+                  <span>Google AI SDK Integration</span>
                 </li>
                 <li>
                 <span class="feature-bullet"></span>
-                  <span>Computer Vision</span>
+                  <span>Automated AI Workflows</span>
                 </li>
             </ul>
           </div>
@@ -253,13 +253,14 @@ import AOS from 'aos';
       position: relative;
       overflow: hidden;
       color: white;
-      background-color: #141414 !important;
+      background-color: #1E1E1E !important;
     }
 
     .service-card:hover {
-        transform: translateY(-5px);
+      transform: translateY(-5px);
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
       border-color: rgba(59, 130, 246, 0.1);
+      background-color: #1E1E1E !important;
     }
 
     /* Service icon styling */

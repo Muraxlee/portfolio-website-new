@@ -18,10 +18,12 @@ import { RouterModule } from '@angular/router';
       <div class="container">
         <h2 data-aos="fade-up">About Me</h2>
         
-        <div class="about-section" data-aos="fade-up" data-aos-delay="100">
-          <p>
-            Hi, I’m <strong>Murali P</strong>, a passionate <strong>Full-Stack Developer</strong> with experience building scalable web, mobile, and desktop applications. From crafting responsive UI to architecting reliable backends, I bring ideas to life with code that’s clean, efficient, and tailored for real-world use.
-          </p>
+        <div class="about-intro" data-aos="fade-up" data-aos-delay="100">
+          <div class="intro-card">
+            <p>
+              Hi, I'm <strong>Murali P</strong>, a passionate <strong>Full-Stack Developer</strong> with experience building scalable web, mobile, and desktop applications. From crafting responsive UI to architecting reliable backends, I bring ideas to life with code that's clean, efficient, and tailored for real-world use.
+            </p>
+          </div>
         </div>
         <hr>
 
@@ -40,16 +42,36 @@ import { RouterModule } from '@angular/router';
           <h3 class="section-subtitle">Tech Stack</h3>
           <div class="skills-grid">
             <div class="skill-category">
-              <h4>Languages &amp; Frameworks:</h4>
-              <p>C#, C++, React Native, Node.js, HTML, CSS, Tailwind CSS</p>
+              <h4>Programming Languages:</h4>
+              <p>C, C++, C#, Python, HTML5, CSS3</p>
+            </div>
+            <div class="skill-category">
+              <h4>Frameworks & Libraries:</h4>
+              <p>React Native, Node.js, Tailwind CSS</p>
             </div>
             <div class="skill-category">
               <h4>Databases:</h4>
-              <p>PostgreSQL, SQLite, Firestore</p>
+              <p>PostgreSQL, SQLite, Firestore, Firebase</p>
             </div>
             <div class="skill-category">
-              <h4>Tools &amp; Platforms:</h4>
-              <p>Git, VS Code, Postman, Windows, Linux, Expo, RDLC, n8n</p>
+              <h4>Tools & Platforms:</h4>
+              <p>Git, GitHub, GitLab, VS Code, Postman, Docker, n8n, AWS Lambda</p>
+            </div>
+            <div class="skill-category">
+              <h4>APIs & Services:</h4>
+              <p>Google Sheets API, Firestore, AWS Lambda</p>
+            </div>
+            <div class="skill-category">
+              <h4>AI & Automation:</h4>
+              <p>n8n, Google AI SDK, Automated Workflows</p>
+            </div>
+            <div class="skill-category">
+              <h4>Operating Systems:</h4>
+              <p>Linux, Windows</p>
+            </div>
+            <div class="skill-category">
+              <h4>Soft Skills:</h4>
+              <p>Communication, Problem Solving, Agile Collaboration</p>
             </div>
           </div>
         </div>
@@ -80,11 +102,11 @@ import { RouterModule } from '@angular/router';
         <div class="about-section" data-aos="fade-up" data-aos-delay="600">
           <h3 class="section-subtitle">Quick Facts</h3>
           <ul class="quick-facts-list">
-            <li><strong>Experience:</strong> 1+ Year in full-stack development</li>
+            <li><strong>Experience:</strong> 1+ Year in development</li>
             <li><strong>Projects Completed:</strong> 10+</li>
             <li><strong>Happy Clients:</strong> 5+</li>
             <li><strong>Location:</strong> Thanjavur, Tamil Nadu, India</li>
-            <li><strong>Languages Spoken:</strong> English, Hindi, Tamil</li>
+            <li><strong>Languages Spoken:</strong> English (Professional), Tamil (Native), Hindi (Basic)</li>
           </ul>
         </div>
         <hr>

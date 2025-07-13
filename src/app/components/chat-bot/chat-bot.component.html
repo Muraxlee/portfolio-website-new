@@ -46,11 +46,10 @@
       #messageInput
       (focus)="onInputFocus()"
     >
-    <button
+    <button 
+      class="send-btn" 
       (click)="sendMessage()"
-      [disabled]="!newMessage.trim()"
-      aria-label="Send message"
-    >
+      [disabled]="!newMessage.trim()">
       <i class="fas fa-paper-plane"></i>
     </button>
   </div>

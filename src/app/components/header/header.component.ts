@@ -21,11 +21,15 @@ import { RouterModule } from '@angular/router';
             <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
           </ul>
         </nav>
+        <a href="assets/Murali Resume.pdf" target="_blank" class="resume-btn">Resume</a>
         <button class="mobile-menu-btn" (click)="toggleMobileMenu()">
           <i class="fas fa-bars"></i>
         </button>
       </div>
       <div class="mobile-menu" [class.active]="isMobileMenuOpen">
+        <button class="mobile-menu-close" (click)="closeMobileMenu()">
+          <i class="fas fa-times"></i>
+        </button>
         <nav>
           <ul>
             <li><a routerLink="/" (click)="closeMobileMenu()">Home</a></li>
@@ -33,6 +37,7 @@ import { RouterModule } from '@angular/router';
             <li><a routerLink="/projects" (click)="closeMobileMenu()">Projects</a></li>
             <li><a routerLink="/services" (click)="closeMobileMenu()">Services</a></li>
             <li><a routerLink="/contact" (click)="closeMobileMenu()">Contact</a></li>
+            <li><a href="assets/Murali Resume.pdf" target="_blank" (click)="closeMobileMenu()">Resume</a></li>
           </ul>
         </nav>
       </div>
@@ -118,6 +123,23 @@ import { RouterModule } from '@angular/router';
       width: 100%;
     }
 
+    .resume-btn {
+      background: var(--primary-gradient);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-full);
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: var(--shadow-md);
+      margin-left: 2rem; /* Space from navigation */
+    }
+
+    .resume-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
     .mobile-menu-btn {
       display: none;
       background: none;
@@ -147,33 +169,104 @@ import { RouterModule } from '@angular/router';
       padding: 5rem 2rem 2rem;
       box-shadow: var(--shadow-lg);
       border-left: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
     }
 
     .mobile-menu.active {
       right: 0;
     }
 
-    .mobile-menu nav ul {
+    .mobile-menu nav {
+      flex-grow: 1;
+      display: flex;
       flex-direction: column;
     }
 
+    .mobile-menu nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+      height: 100%;
+      justify-content: flex-start;
+      padding-top: 2rem;
+      width: 100%;
+    }
+
     .mobile-menu nav ul li {
-      margin: 1.25rem 0;
+      margin: 0.75rem 0;
+      width: 100%;
+      display: block;
     }
 
     .mobile-menu nav ul li a {
       font-size: 1.2rem;
       display: block;
-      padding: 0.5rem 0;
+      padding: 0.75rem 1rem;
+      color: var(--text-color);
+      text-decoration: none;
+      border-radius: var(--radius);
+      transition: background-color 0.3s ease;
+      line-height: 1.5;
+    }
+
+    .mobile-menu nav ul li a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .mobile-menu-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: none;
+      border: none;
+      color: var(--text-color);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: var(--radius-sm);
+      transition: background-color var(--transition-fast) ease;
+      z-index: 1003;
+    }
+
+    .mobile-menu-close:hover {
+      background-color: rgba(255, 255, 255, 0.1);
     }
 
     @media (max-width: 768px) {
+      /* The main navigation is hidden on mobile */
       nav {
         display: none;
       }
 
+      .resume-btn {
+        display: none; /* Hide desktop resume button on mobile */
+      }
+
       .mobile-menu-btn {
         display: block;
+        color: var(--text-color);
+      }
+
+      .mobile-menu {
+        width: 100%;
+        max-width: 320px;
+        background-color: var(--card-background);
+        z-index: 1001;
+      }
+
+      .mobile-menu nav ul li a {
+        font-size: 1.2rem;
+        display: block;
+        padding: 0.75rem 1rem;
+        color: var(--text-color);
+        text-decoration: none;
+        border-radius: var(--radius);
+        transition: background-color 0.3s ease;
+      }
+
+      .mobile-menu nav ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
       }
     }
   `]

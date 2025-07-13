@@ -1,61 +1,67 @@
 {
-  "hash": "f0f146c7",
-  "configHash": "0dc417e5",
-  "lockfileHash": "e0cbc88e",
-  "browserHash": "58cabc3e",
+  "hash": "727e00a7",
+  "configHash": "f1bc3fd5",
+  "lockfileHash": "7494dc63",
+  "browserHash": "5e2bf86f",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "634ba7ee",
+      "fileHash": "aae27494",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "7a8d72e4",
+      "fileHash": "b2c6521c",
       "needsInterop": false
     },
     "@angular/forms": {
       "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
-      "fileHash": "c6be3f4e",
+      "fileHash": "43276bf5",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "278f2e0b",
+      "fileHash": "877a01c6",
       "needsInterop": false
     },
     "@angular/platform-browser/animations": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/animations.mjs",
       "file": "@angular_platform-browser_animations.js",
-      "fileHash": "69bc482e",
+      "fileHash": "61f2e2d5",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "9e50c11c",
+      "fileHash": "9726c6bf",
       "needsInterop": false
     },
     "aos": {
       "src": "../../../../../../../node_modules/aos/dist/aos.js",
       "file": "aos.js",
-      "fileHash": "81869eec",
+      "fileHash": "41c14d08",
       "needsInterop": true
     },
     "rxjs": {
       "src": "../../../../../../node_modules/rxjs/dist/esm5/index.js",
       "file": "rxjs.js",
-      "fileHash": "ff5fe7ad",
+      "fileHash": "898bfceb",
       "needsInterop": false
     },
     "rxjs/operators": {
       "src": "../../../../../../node_modules/rxjs/dist/esm5/operators/index.js",
       "file": "rxjs_operators.js",
-      "fileHash": "45e44ea4",
+      "fileHash": "57c7dc52",
+      "needsInterop": false
+    },
+    "@google/generative-ai": {
+      "src": "../../../../../../node_modules/@google/generative-ai/dist/index.mjs",
+      "file": "@google_generative-ai.js",
+      "fileHash": "88e18c90",
       "needsInterop": false
     }
   },

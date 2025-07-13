@@ -84,9 +84,9 @@ export class ChatBotComponent implements OnInit, OnDestroy, AfterViewChecked {
   /**
    * Send a message if it's not empty
    */
-  sendMessage(): void {
+  async sendMessage(): Promise<void> {
     if (this.newMessage.trim()) {
-      this.chatService.addUserMessage(this.newMessage.trim());
+      await this.chatService.addUserMessage(this.newMessage.trim());
       this.newMessage = '';
     }
   }

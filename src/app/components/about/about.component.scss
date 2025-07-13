@@ -79,7 +79,8 @@ h2 {
 }
 
 .about-section {
-  background: #2e2e2e; /* Changed from black to VS Code dark gray */
+  background-color: rgba(30, 30, 30, 0.8); // Slightly transparent background
+  backdrop-filter: blur(10px); // Add blur effect
   padding: 2.5rem;
   border-radius: var(--radius-lg);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -139,23 +140,67 @@ ul li {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.skill-category h4 {
-  color: #7c3aed;
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
-}
-
-.skill-category p {
-  color: rgba(255, 255, 255, 0.9);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem; // Reduced gap between grid items
+  
+  .skill-category {
+    background-color: #1E1E1E;
+    border-radius: var(--radius-lg);
+    padding: 1rem; // Reduced padding
+    margin-bottom: 0.5rem; // Reduced margin
+    
+    h4 {
+      margin-bottom: 0.5rem; // Reduced margin for category titles
+      color: #7c3aed; // Purple color for category titles
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
 }
 
 .quick-facts-list li strong {
     color: #7c3aed;
+}
+
+.about-intro {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro-card {
+    background-color: rgba(30, 30, 30, 0.8); // Slightly transparent background
+    backdrop-filter: blur(10px); // Add blur effect
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -164,5 +209,35 @@ ul li {
   }
   .skills-grid {
     grid-template-columns: 1fr;
+  }
+} 
+
+.quick-facts-list {
+  list-style-type: none;
+  padding: 0;
+  
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    
+    &::before {
+      content: '•';
+      color: #7c3aed; // Purple dot to match the design
+      margin-right: 0.75rem;
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+    
+    strong {
+      min-width: 180px;
+      margin-right: 1rem;
+      color: rgba(255, 255, 255, 0.8);
+      display: inline-block;
+    }
+    
+    span {
+      color: rgba(255, 255, 255, 0.7);
+    }
   }
 } 

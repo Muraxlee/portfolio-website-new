@@ -1,4 +1,4 @@
-import { Component, OnInit, PLATFORM_ID, Inject } from '@angular/core';
+import { Component, OnInit, PLATFORM_ID, Inject, ElementRef, ViewChildren, QueryList, AfterViewInit } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import AOS from 'aos';
@@ -43,23 +43,22 @@ import AOS from 'aos';
       <div class="container">
         <div class="grid grid-2">
           <div class="about-content" data-aos="fade-right">
-            <span class="section-subtitle">About Me</span>
             <h2>Turning Ideas into Real-World Applications</h2>
             <p>
               I'm a versatile and results-driven developer with hands-on experience in building modern web, mobile, and desktop apps. With a strong foundation in full-stack development and a passion for clean, maintainable code, I've delivered tailored software solutions that improve efficiency and drive results for clients across industries.
             </p>
             <div class="stats-grid">
               <div class="stat-item">
-                <span class="stat-number">10+</span>
+                <span #projectsCounter class="stat-number">0</span>
                 <span class="stat-label">Projects Completed</span>
               </div>
               <div class="stat-item">
-                <span class="stat-number">5+</span>
+                <span #clientsCounter class="stat-number">0</span>
                 <span class="stat-label">Satisfied Clients</span>
               </div>
               <div class="stat-item">
-                <span class="stat-number">1+</span>
-                <span class="stat-label">Year of Hands-on Development Experience</span>
+                <span #experienceCounter class="stat-number">0</span>
+                <span class="stat-label">Years of Development Experience</span>
               </div>
             </div>
             <a routerLink="/about" class="btn btn-outline">
@@ -70,7 +69,7 @@ import AOS from 'aos';
           <div class="about-image" data-aos="fade-left">
             <div class="image-container">
               <div class="image-background"></div>
-              <img src="assets/images/profile.jpg" alt="Murali P" class="profile-image">
+              <img src="assets/images/Murali.png" alt="Murali P" class="profile-image">
             </div>
           </div>
         </div>
@@ -304,79 +303,140 @@ import AOS from 'aos';
       margin-top: 2rem;
     }
 
-    /* About Preview */
+    /* About Preview Styles */
     .about-preview {
-      background-color: var(--dark-bg);
-    }
-
-    .section-subtitle {
-      display: block;
-      color: var(--primary-color);
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-size: 0.875rem;
-      text-align: center;
-    }
-
-    .about-content h2 {
-      color: white;
-    }
-
-    .about-content p {
-      color: rgba(255, 255, 255, 0.8);
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin: 2rem 0;
-    }
-
-    .stat-item {
-      text-align: center;
-    }
-
-    .stat-number {
-      display: block;
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--primary-color);
-      margin-bottom: 0.5rem;
-    }
-
-    .stat-label {
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 0.875rem;
-    }
-
-    .image-container {
       position: relative;
-      padding-top: 100%;
-      border-radius: var(--radius);
+      padding: 4rem 0;
+      background: #121212; /* Updated to match SCSS file */
       overflow: hidden;
     }
 
-    .image-background {
+    .about-preview::before {
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-      opacity: 0.1;
+      background: rgba(18, 18, 18, 0.8); /* Updated to match new background color */
+      backdrop-filter: blur(10px);
+      z-index: 1;
     }
 
-    .profile-image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: var(--radius);
+    .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-right: 2rem;
+      color: white;
+
+      @media (max-width: 768px) {
+        padding-right: 0;
+        text-align: center;
+      }
+    }
+
+    .about-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: white;
+      line-height: 1.2;
+      text-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .about-content p {
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .stats-grid {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      gap: 1rem;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .stat-number {
+      display: block;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #6366f1; /* Indigo color for better contrast */
+      margin-bottom: 0.5rem;
+      line-height: 1;
+      text-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    .stat-label {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .about-image {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      perspective: 1000px;
+
+      .image-container {
+        position: relative;
+        max-width: 400px;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        transform: rotateY(-5deg);
+        transition: all 0.5s ease;
+
+        &:hover {
+          transform: rotateY(-10deg) scale(1.05);
+          box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.3);
+        }
+      }
+
+      .image-background {
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        right: -20px;
+        bottom: -20px;
+        background: rgba(99, 102, 241, 0.1);
+        filter: blur(10px);
+        z-index: 1;
+      }
+
+      .profile-image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.8);
+        width: 125%;
+        height: 125%;
+        object-fit: cover;
+        object-position: center top;
+        z-index: 2;
+      }
     }
 
     /* Services Preview */
@@ -541,7 +601,10 @@ import AOS from 'aos';
     }
   `]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
+  @ViewChildren('projectsCounter, clientsCounter, experienceCounter') 
+  counterElements!: QueryList<ElementRef>;
+
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngOnInit() {
@@ -552,5 +615,50 @@ export class HomeComponent implements OnInit {
         offset: 100
       });
     }
+  }
+
+  ngAfterViewInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.initCounters();
+    }
+  }
+
+  private initCounters() {
+    const counters = [
+      { element: this.counterElements.toArray()[0], target: 10, duration: 1500 },
+      { element: this.counterElements.toArray()[1], target: 5, duration: 1500 },
+      { element: this.counterElements.toArray()[2], target: 1, duration: 1500 }
+    ];
+
+    counters.forEach(counter => {
+      this.animateCounter(
+        counter.element.nativeElement, 
+        0, 
+        counter.target, 
+        counter.duration
+      );
+    });
+  }
+
+  private animateCounter(
+    element: HTMLElement, 
+    start: number, 
+    end: number, 
+    duration: number
+  ) {
+    let startTimestamp: number | null = null;
+    const step = (timestamp: number) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      const currentValue = Math.floor(progress * (end - start) + start);
+      
+      element.textContent = currentValue.toString() + (currentValue === end ? '+' : '');
+      
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    
+    window.requestAnimationFrame(step);
   }
 }

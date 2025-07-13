@@ -1,0 +1,15 @@
+    .project-card {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.3s ease;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      height: 100%;
+      background-color: #1E1E1E;
+      color: white;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    } 
