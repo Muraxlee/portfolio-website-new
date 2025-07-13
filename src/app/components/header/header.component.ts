@@ -163,12 +163,12 @@ import { RouterModule } from '@angular/router';
       width: 75%;
       max-width: 320px;
       height: 100vh;
-      background-color: var(--card-background);
-      z-index: 1001;
+      background-color: #1E1E1E; /* Explicit dark background */
+      z-index: 1001; 
       transition: right var(--transition-normal) ease;
       padding: 5rem 2rem 2rem;
-      box-shadow: var(--shadow-lg);
-      border-left: 1px solid var(--border-color);
+      box-shadow: var(--shadow-lg); 
+      border-left: 1px solid var(--border-color); 
       display: flex;
       flex-direction: column;
       overflow-y: auto;
@@ -180,7 +180,7 @@ import { RouterModule } from '@angular/router';
 
     .mobile-menu nav {
       flex-grow: 1;
-      display: flex;
+      display: flex; 
       flex-direction: column;
     }
 
@@ -191,19 +191,20 @@ import { RouterModule } from '@angular/router';
       justify-content: flex-start;
       padding-top: 2rem;
       width: 100%;
+      background-color: transparent; /* Ensure no background on the ul itself */
     }
 
     .mobile-menu nav ul li {
       margin: 0.75rem 0;
       width: 100%;
-      display: block;
+      display: block; 
     }
 
     .mobile-menu nav ul li a {
       font-size: 1.2rem;
-      display: block;
+      display: block; 
       padding: 0.75rem 1rem;
-      color: var(--text-color);
+      color: white !important; /* Force white color for menu text */
       text-decoration: none;
       border-radius: var(--radius);
       transition: background-color 0.3s ease;
@@ -220,13 +221,13 @@ import { RouterModule } from '@angular/router';
       right: 1.5rem;
       background: none;
       border: none;
-      color: var(--text-color);
+      color: white !important; /* Force white color for close button */
       font-size: 1.5rem;
       cursor: pointer;
       padding: 0.5rem;
       border-radius: var(--radius-sm);
       transition: background-color var(--transition-fast) ease;
-      z-index: 1003;
+      z-index: 1003; 
     }
 
     .mobile-menu-close:hover {
@@ -234,8 +235,8 @@ import { RouterModule } from '@angular/router';
     }
 
     @media (max-width: 768px) {
-      /* The main navigation is hidden on mobile */
-      nav {
+      /* The main desktop navigation is hidden on mobile */
+      header > .container > nav {
         display: none;
       }
 
@@ -245,24 +246,47 @@ import { RouterModule } from '@angular/router';
 
       .mobile-menu-btn {
         display: block;
-        color: var(--text-color);
+        color: white !important; /* Force white color for menu button */
       }
 
       .mobile-menu {
         width: 100%;
         max-width: 320px;
-        background-color: var(--card-background);
+        background-color: #1E1E1E; /* Explicit dark background */
         z-index: 1001;
+      }
+
+      .mobile-menu nav {
+        display: flex; 
+        flex-direction: column;
+        flex-grow: 1;
+      }
+
+      .mobile-menu nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100%;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        width: 100%;
+        background-color: transparent; /* Ensure no background on ul */
+      }
+
+      .mobile-menu nav ul li {
+        display: block; 
+        margin: 0.75rem 0;
+        width: 100%;
       }
 
       .mobile-menu nav ul li a {
         font-size: 1.2rem;
-        display: block;
+        display: block; 
         padding: 0.75rem 1rem;
-        color: var(--text-color);
+        color: white !important; /* Force white color for text */
         text-decoration: none;
         border-radius: var(--radius);
         transition: background-color 0.3s ease;
+        line-height: 1.5;
       }
 
       .mobile-menu nav ul li a:hover {
