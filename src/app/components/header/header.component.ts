@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -32,11 +33,11 @@ import { RouterModule } from '@angular/router';
         </button>
         <nav>
           <ul>
-            <li><a routerLink="/" (click)="closeMobileMenu()">Home</a></li>
-            <li><a routerLink="/about" (click)="closeMobileMenu()">About</a></li>
-            <li><a routerLink="/projects" (click)="closeMobileMenu()">Projects</a></li>
-            <li><a routerLink="/services" (click)="closeMobileMenu()">Services</a></li>
-            <li><a routerLink="/contact" (click)="closeMobileMenu()">Contact</a></li>
+            <li><a routerLink="/" (click)="closeMobileMenu()" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+            <li><a routerLink="/about" (click)="closeMobileMenu()" routerLinkActive="active">About</a></li>
+            <li><a routerLink="/projects" (click)="closeMobileMenu()" routerLinkActive="active">Projects</a></li>
+            <li><a routerLink="/services" (click)="closeMobileMenu()" routerLinkActive="active">Services</a></li>
+            <li><a routerLink="/contact" (click)="closeMobileMenu()" routerLinkActive="active">Contact</a></li>
             <li><a href="assets/Murali Resume.pdf" target="_blank" (click)="closeMobileMenu()">Resume</a></li>
           </ul>
         </nav>
@@ -282,15 +283,38 @@ import { RouterModule } from '@angular/router';
         font-size: 1.2rem;
         display: block; 
         padding: 0.75rem 1rem;
-        color: white !important; /* Force white color for text */
+        color: white; /* Default color for mobile menu items, no !important */
         text-decoration: none;
         border-radius: var(--radius);
-        transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease, color 0.3s ease;
         line-height: 1.5;
-      }
+        position: relative; /* For the underline */
 
-      .mobile-menu nav ul li a:hover {
-        background-color: rgba(255, 255, 255, 0.1);
+        &:after {
+          /* Reset ::after for mobile menu to ensure no inherited underlines */
+          content: none;
+        }
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+          color: var(--primary-color);
+        }
+
+        &.active {
+          background-color: rgba(255, 255, 255, 0.1);
+          color: white; /* Keep text white for active state in mobile */
+
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: -2px; /* Adjust as needed */
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary-gradient); /* Use your gradient for consistency */
+            border-radius: var(--radius-full);
+          }
+        }
       }
     }
   `]
@@ -299,6 +323,15 @@ export class HeaderComponent {
   isScrolled = false;
   isMobileMenuOpen = false;
 
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      console.log('Current URL:', this.router.url);
+      this.logActiveStates();
+    });
+  }
+
   @HostListener('window:scroll')
   onScroll() {
     this.isScrolled = window.scrollY > 50;
@@ -306,9 +339,22 @@ export class HeaderComponent {
 
   toggleMobileMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    if (this.isMobileMenuOpen) {
+      console.log('Mobile menu opened. Current URL:', this.router.url);
+      this.logActiveStates();
+    }
   }
 
   closeMobileMenu() {
     this.isMobileMenuOpen = false;
+  }
+
+  logActiveStates() {
+    const navLinks = document.querySelectorAll('.mobile-menu nav ul li a');
+    navLinks.forEach(link => {
+      const routerLink = link.getAttribute('routerLink');
+      const isActive = link.classList.contains('active');
+      console.log(`Link: ${routerLink}, Is Active: ${isActive}`);
+    });
   }
 }

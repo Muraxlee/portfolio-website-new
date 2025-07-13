@@ -93,14 +93,36 @@
     }
   }
 
+  nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-gradient);
+    transition: width var(--transition-normal) ease;
+    border-radius: var(--radius-full);
+  }
+
+  nav ul li a:hover::after,
+  nav ul li a.active::after {
+    width: 100%;
+  }
+
   @media (max-width: 768px) {
+    /* The main desktop navigation is hidden on mobile */
+    header > .container > nav {
+      display: none;
+    }
+
     .nav {
       position: fixed;
       top: 0;
       right: -100%;
       width: 70%;
       height: 100vh;
-      background: white;
+      background: #1E1E1E; /* Use consistent dark background */
       padding: 2rem;
       transition: right 0.3s ease;
       box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
@@ -113,6 +135,96 @@
         flex-direction: column;
         gap: 1.5rem;
       }
+    }
+
+    .mobile-menu {
+      background-color: #1E1E1E; /* Ensure this is consistent */
+      width: 100%;
+      max-width: 320px;
+      z-index: 1001;
+      height: 100vh;
+      padding: 5rem 2rem 2rem;
+      box-shadow: var(--shadow-lg);
+      border-left: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      top: 0;
+      right: -100%;
+      position: fixed;
+      transition: right var(--transition-normal) ease;
+
+      &.active {
+        right: 0;
+      }
+
+      nav {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100%;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        width: 100%;
+        background-color: transparent;
+      }
+
+      nav ul li {
+        margin: 0.75rem 0;
+        width: 100%;
+        display: block;
+      }
+
+      nav ul li a {
+        font-size: 1.2rem;
+        display: block;
+        padding: 0.75rem 1rem;
+        color: white; /* Default color for mobile menu items */
+        text-decoration: none;
+        border-radius: var(--radius);
+        transition: background-color 0.3s ease, color 0.3s ease;
+        line-height: 1.5;
+        position: relative; /* For the underline */
+
+        &:after {
+          /* Reset ::after for mobile menu to ensure no inherited underlines */
+          content: none;
+        }
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+          color: var(--primary-color);
+        }
+
+        &.active {
+          background-color: rgba(255, 255, 255, 0.1);
+          color: white; /* Keep text white for active state in mobile */
+
+          &:after {
+            content: '';
+            position: absolute;
+            bottom: -2px; /* Adjust as needed */
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary-gradient); /* Use your gradient for consistency */
+            border-radius: var(--radius-full);
+          }
+        }
+      }
+    }
+
+    .mobile-menu-close {
+      color: white; /* No !important here */
+    }
+
+    .mobile-menu-btn {
+      color: white; /* No !important here */
     }
 
     .menu-toggle {
