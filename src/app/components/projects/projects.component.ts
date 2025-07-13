@@ -30,7 +30,7 @@ import AOS from 'aos';
             <div class="project-card" data-aos="fade-up" data-aos-delay="100">
               <div class="project-image">
                 <div class="project-badge">Web App</div>
-                <img src="assets/images/projects/invoice-saas.jpg" alt="Invoice Management SaaS">
+                <img src="/images/InvoiceFlow.webp" alt="Invoice Management SaaS">
                 <div class="project-overlay">
                   <a href="https://youtu.be/tugbLWmV5aI" target="_blank" class="btn btn-primary">
                     <i class="fas fa-external-link-alt"></i>
@@ -63,7 +63,7 @@ import AOS from 'aos';
             <div class="project-card" data-aos="fade-up" data-aos-delay="200">
               <div class="project-image">
                 <div class="project-badge">Web App</div>
-                <img src="assets/images/projects/mentore-agro.jpg" alt="Mentore Agro Products">
+                <img src="/images/mentore Agro.webp" alt="Mentore Agro Products">
                 <div class="project-overlay">
                   <a href="https://mentoreagroproducts.netlify.app/" target="_blank" class="btn btn-primary">
                     <i class="fas fa-external-link-alt"></i>
@@ -97,7 +97,7 @@ import AOS from 'aos';
             <div class="project-card" data-aos="fade-up" data-aos-delay="300">
               <div class="project-image">
                 <div class="project-badge">Web App</div>
-                <img src="assets/images/projects/snackhives.jpg" alt="SnackHives">
+                <img src="/images/SnakHive.webp" alt="SnackHives">
                 <div class="project-overlay">
                   <a href="https://snackhive.netlify.app/" target="_blank" class="btn btn-primary">
                     <i class="fas fa-external-link-alt"></i>
@@ -129,7 +129,7 @@ import AOS from 'aos';
             <div class="project-card" data-aos="fade-up" data-aos-delay="400">
               <div class="project-image">
                 <div class="project-badge">Web App</div>
-                <img src="assets/images/projects/agent-gps.jpg" alt="Agent GPS Tracker">
+                <img src="/images/AgenTracker.webp" alt="Agent GPS Tracker">
                 <div class="project-overlay">
                   <a href="https://www.youtube.com/watch?v=pof2bGm5U44" target="_blank" class="btn btn-primary">
                     <i class="fas fa-external-link-alt"></i>
@@ -162,7 +162,7 @@ import AOS from 'aos';
             <div class="project-card" data-aos="fade-up" data-aos-delay="500">
               <div class="project-image">
                 <div class="project-badge">Web App</div>
-                <img src="assets/images/projects/tindog.jpg" alt="TinDog">
+                <img src="/images/Tindog.webp" alt="TinDog">
                 <div class="project-overlay">
                   <a href="https://muraxlee.github.io/TinDog/" target="_blank" class="btn btn-primary">
                     <i class="fas fa-external-link-alt"></i>
@@ -199,7 +199,7 @@ import AOS from 'aos';
             <div class="project-card" data-aos="fade-up" data-aos-delay="100">
               <div class="project-image">
                 <div class="project-badge">Mobile App</div>
-                <img src="assets/images/projects/kant.jpg" alt="Kant – Anonymous Social App">
+                <img src="/images/thamnail_kants.webp" alt="Kant – Anonymous Social App">
                 <div class="project-overlay">
                   <a href="https://gitfront.io/r/Ruby/QuXsQDixAEqm/Kants/" target="_blank" class="btn btn-primary">
                     <i class="fas fa-external-link-alt"></i>
@@ -237,7 +237,7 @@ import AOS from 'aos';
             <div class="project-card" data-aos="fade-up" data-aos-delay="100">
               <div class="project-image">
                 <div class="project-badge">Desktop App</div>
-                <img src="assets/images/projects/banker.jpg" alt="Banker – Pawnshop Management App">
+                <img src="/images/Banker.webp" alt="Banker – Pawnshop Management App">
                 <div class="project-overlay">
                   <a href="https://gitfront.io/r/Ruby/r6BkWibqWpWt/Banker_New/" target="_blank" class="btn btn-primary">
                     <i class="fas fa-external-link-alt"></i>
